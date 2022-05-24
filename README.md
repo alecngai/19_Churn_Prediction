@@ -10,4 +10,8 @@ What Is Churn Rate? The churn rate, also known as the rate of attrition or custo
 - Demographic info about customers – gender, age range, and if they have partners and dependents
 
 ![Overview1](https://raw.githubusercontent.com/alecngai/19_Churn_Prediction/main/Resources/Images/Overview1.jpg)
-![Overview1](https://raw.githubusercontent.com/alecngai/19_Churn_Prediction/main/Resources/Images/output.png)
+
+## Data Cleaning 
+
+Initially, we can see that Total Charges is an Object, so I converted it to a numeric value, in doing so we can see that we have 11 null values, this is because these 11 customers did not use the service for longer than a month, and the calculation 
+for Total charges is Tenure * Monthly Charge, so these 11 customers have Null due to their Tenure being zero. I decided to remove these customers as they will skew the data since we do not have much data on how our service affected these customers. 
