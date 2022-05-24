@@ -9,4 +9,4 @@ What Is Churn Rate? The churn rate, also known as the rate of attrition or custo
 - Customer account information – how long they’ve been a customer, contract, payment method, paperless billing, monthly charges, and total charges
 - Demographic info about customers – gender, age range, and if they have partners and dependents
 
-![Overview1](https://raw.githubusercontent.com/alecngai/19_Churn_Prediction/main/Resources/Images/Overview1.png)
+![Overview1](https://raw.githubusercontent.com/alecngai/19_Churn_Prediction/main/Resources/Images/Overview1.jpg)
