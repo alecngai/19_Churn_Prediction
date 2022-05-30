@@ -18,9 +18,13 @@ What Is Churn Rate? The churn rate, also known as the rate of attrition or custo
 Initially, we can see that Total Charges is an Object, so I converted it to a numeric value, in doing so we can see that we have 11 null values, this is because these 11 customers did not use the service for longer than a month, and the calculation 
 for Total charges is Tenure * Monthly Charge, so these 11 customers have Null due to their Tenure being zero. I decided to remove these customers as they will skew the data since we do not have much data on how our service affected these customers. 
 
-![Churn](https://raw.githubusercontent.com/alecngai/19_Churn_Prediction/main/Resources/Images/Churn_Rates.png)       
+![Churn](https://raw.githubusercontent.com/alecngai/19_Churn_Prediction/main/Resources/Images/Churn_Rates.png)   
 
-After exploring the variables, I have decided not to use the following variable because they add little or no informative power to the model:
+Here is a visable graph showing the relation to each feature to Churn. Allowing us to further our feature selection to reduce uneeded features. 
+
+![Churn2](https://raw.githubusercontent.com/alecngai/19_Churn_Prediction/main/Resources/Images/Churn_Relation.png)
+
+After exploring the features, I have decided not to use the following features because they add little or no informative power to the model:
 
 - Customer ID
 - Gender
@@ -28,4 +32,25 @@ After exploring the variables, I have decided not to use the following variable 
 - Contract
 - TotalCharges
 - MultipleLines
+
+The final list of features which we will use are: 
+Discontinous:
+- SeniorCitizen 
+- Partner 
+- Dependents
+- InternetService
+- OnlineSecurity
+- OnlineBackup
+- DeviceProtection
+- TechSupport
+- StreamingTV
+- StreamingMovies
+- PaperlessBilling
+- PaymentMethod
+
+Continuous: 
+- Tenure
+- MonthlyCharges
+
+For the continous features, we used MinMAxScaler to scale the values and fit transformed them to better fit the metrics of the model.  We also dropped first if the feature was binary to downsize the input for the model. 
 
